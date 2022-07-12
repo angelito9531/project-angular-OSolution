@@ -2,12 +2,14 @@
 <hr>
 <div class="row">
     <div class="col">
-       <app-personajes [listaPersonajes]="listaPersonajes"></app-personajes>
+        <!-- enviamos parametros por inputs  <app-personajes [parametro]="variablevalor></app-personajes>" -->
+       <app-personajes></app-personajes>
     </div>
     <div class="col">
+        <!-- [personajenuevo]="personajenuevo"
+        (agregandoPersonaje)="agregarNuevoPersonaje($event)" -->
         <app-lista-personajes 
         [personajenuevo]="personajenuevo"
-        (agregandoPersonaje)="agregarNuevoPersonaje($event)"
         ></app-lista-personajes>        
     </div>
 </div>
