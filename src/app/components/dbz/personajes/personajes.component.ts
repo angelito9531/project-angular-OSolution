@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Personajes } from '../interfaces/personaje';
+import { Personaje } from '../interfaces/dbz.interface';
 
 @Component({
   selector: 'app-personajes',
@@ -8,6 +8,6 @@ import { Personajes } from '../interfaces/personaje';
 })
 export class PersonajesComponent {
   //@input("nombredelparametro") se peude cambiar el nombre del parametro escribiendo ese nombre en el input
-  @Input() listaPersonajes:Personajes[]=[]
+  @Input() listaPersonajes:Personaje[]=[]
 
 }

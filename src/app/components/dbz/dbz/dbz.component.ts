@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Personajes } from '../interfaces/personaje';
+import { Personaje } from '../interfaces/dbz.interface';
 
 
 @Component({
@@ -8,11 +8,11 @@ import { Personajes } from '../interfaces/personaje';
   styleUrls: ['./dbz.component.css']
 })
 export class DbzComponent implements OnInit {
-  personajenuevo:Personajes={
+  personajenuevo:Personaje={
     nombre:"",
     poder:0
   }
-  listaPersonajes:Personajes[] =[
+  listaPersonajes:Personaje[] =[
     {
       nombre:"Goku",
       poder:15000
@@ -28,17 +28,10 @@ export class DbzComponent implements OnInit {
   ngOnInit(): void {
   }  
 
-  agregarPersonaje():void{
-    if(this.personajenuevo.nombre.trim().length === 0){return}
-    this.listaPersonajes.push(this.personajenuevo);
-    this.limpiarEntradadePersonaje()
+  agregarNuevoPersonaje(argumento:Personaje):void{
+    this.listaPersonajes.push(argumento);
   }
 
-  limpiarEntradadePersonaje():void{
-    this.personajenuevo={
-      nombre:"",
-      poder:0
-    }
-  }
+ 
 
 }

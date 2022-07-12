@@ -1,4 +1,4 @@
-export interface Personajes{
+export interface Personaje{
     nombre:string,
     poder:number
 }
